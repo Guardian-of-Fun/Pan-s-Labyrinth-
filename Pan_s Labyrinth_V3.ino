@@ -2,7 +2,7 @@
 bool amDoor = false;
 
 byte doorCombo[6] = {4, 4, 4, 4, 4, 4};
-Color cardColors[9] = {RED, YELLOW, GREEN, BLUE, RED, YELLOW, GREEN, BLUE, dim(WHITE, 50)};
+Color cardColors[5] = {RED, YELLOW, GREEN, BLUE, dim(WHITE, 50)};
 
 enum cardTypes {REDCARD, YELCARD, GRECARD, BLUCARD, EMPTY};
 byte deckContents[13] = {REDCARD, YELCARD, GRECARD, BLUCARD, REDCARD, YELCARD, GRECARD, BLUCARD, REDCARD, YELCARD, GRECARD, BLUCARD, EMPTY};
