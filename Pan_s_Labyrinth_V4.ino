@@ -1,3 +1,8 @@
+#define ICE makeColorRGB(0, 255, 195)
+#define PUMPKIN makeColorRGB(255, 191, 1)
+#define COSMOS makeColorRGB(139, 20, 145)
+#define ROSE makeColorRGB (232, 9, 76)
+#define MINT makeColorRGB(9, 232, 28)
 enum communicationStates {INERT, GO, RESOLVE};
 byte communicationState = INERT;
 
@@ -5,7 +10,7 @@ byte communicationState = INERT;
 bool amDoor = false;
 
 byte doorCombo[6] = {4, 4, 4, 4, 4, 4};
-Color cardColors[5] = {RED, YELLOW, GREEN, BLUE, dim(WHITE, 50)};
+Color cardColors[5] = {PUMPKIN, COSMOS, MINT, ROSE, dim(WHITE, 50)};
 
 enum cardTypes {REDCARD, YELCARD, GRECARD, BLUCARD, EMPTY};
 byte deckContents[13] = {REDCARD, YELCARD, GRECARD, BLUCARD, REDCARD, YELCARD, GRECARD, BLUCARD, REDCARD, YELCARD, GRECARD, BLUCARD, EMPTY};
@@ -89,10 +94,10 @@ void doorLoop() {
 
   if (isSolved) {
     setColor(WHITE);
-    setColorOnFace(RED, random(5));
-    setColorOnFace(YELLOW, random(5));
-    setColorOnFace(GREEN, random(5));
-    setColorOnFace(BLUE, random(5));
+    setColorOnFace(COSMOS, random(5));
+    setColorOnFace(MINT, random(5));
+    setColorOnFace(ROSE, random(5));
+    setColorOnFace(PUMPKIN, random(5));
     score++;
     newDoor();
   } else {
@@ -123,10 +128,10 @@ void winLoop() {
      communicationState = GO;
   }
   setColor(WHITE);
-  setColorOnFace(RED, random(5));
-  setColorOnFace(YELLOW, random(5));
-  setColorOnFace(GREEN, random(5));
-  setColorOnFace(BLUE, random(5));
+  setColorOnFace(COSMOS, random(5));
+  setColorOnFace(MINT, random(5));
+  setColorOnFace(ROSE, random(5));
+  setColorOnFace(PUMPKIN, random(5));
 }
 
 void cardLoop() {
