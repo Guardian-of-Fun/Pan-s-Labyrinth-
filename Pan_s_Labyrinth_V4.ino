@@ -111,10 +111,7 @@ void doorLoop() {
 void newDoor() {
   //randomize door code
   FOREACH_FACE(f) {
-    doorCombo[f] = random(3);
-    if (doorCombo[f] == 4) {
-      doorCombo[f] = 8;
-    }
+    doorCombo[f] = random(4);
   }
   //reset isSolved
   isSolved = false;
